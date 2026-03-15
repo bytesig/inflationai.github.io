@@ -17,13 +17,25 @@ from openai import OpenAI
 import plotly.express as px
 
 # 1. SIDEBAR: Secure API Key Inputs
-with st.sidebar:
-    st.title("🔑 Startup Credentials")
-    fred_key = st.text_input("6b840502e191e6de512861ee27f2ac9d", type="password")
-    ai_key = st.text_input("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", type="password")
-    st.info("These keys allow your AI to fetch live govt data and 'think'.")
+# 1. SIDEBAR: Secure "Always On" Mode
+# This looks in your Streamlit 'Secrets' vault so you never have to type keys again
+try:
+    fred_key = st.secrets["FRED_KEY"]
+    ai_key = st.secrets["AI_KEY"]
+except:
+    st.error("🔑 Keys not found! Add them to your Streamlit Settings -> Secrets.")
+    st.stop()
 
-st.title("📈 TCPI: Teen Consumer Price Index")
+# This part makes the sidebar look like a real company brand
+with st.sidebar:
+    st.title("🚀 TCPI Startup")
+    st.markdown("### *AI Economic Forecasting*")
+    st.divider()
+    st.write("**Founder:** [Your Name]")
+    st.write("**Status:** Live & Automated")
+
+
+st.title("📈 TCPI: Consumer Price Index")
 st.markdown("### *AI-Powered Economic Forecasting for the Next Generation*")
 
 if fred_key and ai_key:
