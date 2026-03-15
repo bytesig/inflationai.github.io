@@ -27,12 +27,6 @@ except:
     st.stop()
 
 # This part makes the sidebar look like a real company brand
-with st.sidebar:
-    st.title("🚀 TCPI Startup")
-    st.markdown("### *AI Economic Forecasting*")
-    st.divider()
-    st.write("**Founder:** [Your Name]")
-    st.write("**Status:** Live & Automated")
 
 
 st.title("📈 TCPI: Consumer Price Index")
