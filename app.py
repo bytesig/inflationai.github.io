@@ -79,14 +79,14 @@ if fred_key and ai_key:
         context = f"Live Data: Current CPI {y[-1]:.2f}, AI Forecast {prediction:.2f}."
 
         response = client.chat.completions.create(
-            model="meta-llama/llama-3-8b-instruct",
+            model="openrouter/auto",
             messages=[
                 {"role": "system", "content": f"You are a Finance Expert for 8th graders. Use this context: {context}"},
                 {"role": "user", "content": prompt}
             ]
         )
 
-        full_response = response.choices[0].message.content
+        full_response = response.choices.message.content
         with st.chat_message("assistant"):
             st.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
