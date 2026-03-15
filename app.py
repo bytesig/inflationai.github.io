@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1dF46CdfQVnFjF361Wbdm59xOYFyPFSGt
 """
 
-!pip install streamlit fredapi scikit-learn openai plotly
+
 import streamlit as st
 import pandas as pd
 import numpy as np
