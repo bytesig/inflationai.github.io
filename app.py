@@ -75,7 +75,7 @@ if fred_key and ai_key:
             st.markdown(prompt)
 
         # AI Response Logic
-        client = OpenAI(base_url="https://api.groq.com", api_key=ai_key)
+        client = OpenAI(base_url="https://openrouter.ai", api_key=ai_key)
         context = f"Live Data: Current CPI {y[-1]:.2f}, AI Forecast {prediction:.2f}."
 
         response = client.chat.completions.create(
