@@ -79,7 +79,7 @@ if fred_key and ai_key:
         context = f"Live Data: Current CPI {y[-1]:.2f}, AI Forecast {prediction:.2f}."
 
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="meta-llama/llama-3-8b-instruct",
             messages=[
                 {"role": "system", "content": f"You are a Finance Expert for 8th graders. Use this context: {context}"},
                 {"role": "user", "content": prompt}
