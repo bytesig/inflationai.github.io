@@ -86,7 +86,7 @@ if fred_key and ai_key:
             ]
         )
 
-        full_response = response.choices.message.content
+        full_response = response.choices[0].message.content
         with st.chat_message("assistant"):
             st.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
