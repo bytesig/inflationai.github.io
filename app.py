@@ -64,11 +64,11 @@ if fred_key and ai_key:
 
         # 7. AI RESPONSE LOGIC (FIXED URL & INDEX)
         # Note the /api/v1 at the end of the URL
-        client = OpenAI(base_url="https://openrouter.ai", api_key=ai_key)
+        client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=ai_key)
         context = f"Live Data: Current CPI {y[-1]:.2f}, AI Forecast {prediction:.2f}."
 
         response = client.chat.completions.create(
-            model="openrouter/auto",
+            model="openai/gpt-4o-mini",
             messages=[
                 {"role": "system", "content": f"You are a Finance Expert for 8th graders. Use this context: {context}"},
                 {"role": "user", "content": prompt}
