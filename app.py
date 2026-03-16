@@ -4,8 +4,7 @@ st.set_page_config(
     page_title="Bytesig AI", # Changes the browser tab text
     page_icon="📈",                 # Changes the browser tab icon
 )
-<script async="async" data-cfasync="false" src="https://pl28925578.effectivegatecpm.com/ebb58373f577614fad63b4e4dd61f644/invoke.js"></script>
-<div id="container-ebb58373f577614fad63b4e4dd61f644"></div>
+
 # This hides the "made with Streamlit" footer and the red line at the top
 hide_css = """
     <style>
