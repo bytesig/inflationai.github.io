@@ -6,27 +6,19 @@ st.set_page_config(
 )
 
 # This hides the "made with Streamlit" footer and the red line at the top
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden !important;}
-            footer {visibility: hidden !important;}
-            header {visibility: hidden !important;}
-            
-            /* Hides the 'Hosted with Streamlit' red button and status bar */
-            div[data-testid="stStatusWidget"] {display: none !important;}
-            .stAppDeployButton {display: none !important;}
-            
-            /* Hides the colored line at the top */
-            div[data-testid="stDecoration"] {display: none !important;}
-            
-            /* Removes the toolbar (the 'running' man and options) */
-            div[data-testid="stToolbar"] {display: none !important;}
-            
-            /* Cleans up the top margin so it's not a big white gap */
-            .block-container {padding-top: 0rem !important;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+hide_css = """
+    <style>
+    /* Hides 'Made with Streamlit' footer */
+    footer {visibility: hidden !important;}
+    /* Hides 'Hosted with Streamlit' red button */
+    div[data-testid="stStatusWidget"] {display: none !important;}
+    /* Hides the 'Deploy' button specifically */
+    .stAppDeployButton {display: none !important;}
+    /* Removes the top decoration bar */
+    div[data-testid="stDecoration"] {display: none !important;}
+    </style>
+    """
+st.markdown(hide_css, unsafe_allow_html=True)
 
 import streamlit as st
 import pandas as pd
