@@ -1,4 +1,21 @@
 import streamlit as st
+
+st.set_page_config(
+    page_title="Bytesig AI", # Changes the browser tab text
+    page_icon="🚀",                 # Changes the browser tab icon
+)
+
+# This hides the "made with Streamlit" footer and the red line at the top
+hide_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_style, unsafe_allow_html=True)
+
+import streamlit as st
 import pandas as pd
 import numpy as np
 from fredapi import Fred
