@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Your Startup Name", # Changes the browser tab text
+    page_title="Bytesig AI", # Changes the browser tab text
     page_icon="🚀",                 # Changes the browser tab icon
 )
 
