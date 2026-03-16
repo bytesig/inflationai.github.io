@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Bytesig AI", # Changes the browser tab text
-    page_icon="🚀",                 # Changes the browser tab icon
+    page_icon="📈",                 # Changes the browser tab icon
 )
 
 # This hides the "made with Streamlit" footer and the red line at the top
