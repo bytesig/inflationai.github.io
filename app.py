@@ -6,14 +6,19 @@ st.set_page_config(
 )
 
 # This hides the "made with Streamlit" footer and the red line at the top
-hide_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
-    </style>
-    """
-st.markdown(hide_style, unsafe_allow_html=True)
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            /* Hides the 'Hosted with Streamlit' button in the bottom right */
+            .stAppDeployButton {display:none;}
+            /* Hides the 'Manage app' footer bar on Community Cloud */
+            div[data-testid="stStatusWidget"] {display:none;}
+            /* Fixes the gap left at the top */
+            .block-container {padding-top: 2rem;}
+            </style>
+            """
 
 import streamlit as st
 import pandas as pd
