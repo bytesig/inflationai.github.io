@@ -1,0 +1,20 @@
+name: Keep Streamlit App Awake
+
+on:
+  schedule:
+    - cron: '0 */11 * * *' # Runs every 12 hours
+  workflow_dispatch:      # Lets you test it manually
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Push empty commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit --allow-empty -m "Heartbeat to keep Streamlit awake"
+          git push
