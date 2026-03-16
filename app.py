@@ -1,21 +1,23 @@
 import streamlit as st
 
+# 1. SET YOUR TAB NAME (It will still show '· Streamlit' on the free cloud)
 st.set_page_config(
-    page_title="Bytesig AI", # Changes the browser tab text
-    page_icon="🚀",                 # Changes the browser tab icon
+    page_title="My Startup", 
+    page_icon="🚀"
 )
 
-# This hides the "made with Streamlit" footer and the red line at the top
-hide_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
-    </style>
-    """
+# 2. HIDE THE FOOTER AND RED "HOSTED WITH STREAMLIT" BUTTON
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            /* This targets the "Hosted with Streamlit" button specifically */
+            div[data-testid="stStatusWidget"] {display: none;}
+            </style>
+            """
 st.markdown(hide_style, unsafe_allow_html=True)
 
-import streamlit as st
 import pandas as pd
 import numpy as np
 from fredapi import Fred
