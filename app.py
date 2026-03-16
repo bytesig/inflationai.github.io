@@ -36,8 +36,8 @@ if not ai_key.startswith("sk-or-"):
     st.warning(f"⚠️ AI_KEY looks wrong. It starts with `{ai_key[:8]}...` — OpenRouter keys start with `sk-or-v1-`. Check your Streamlit secrets.")
 
 # 3. BRANDING & HEADER
-st.title("📈 TCPI: Consumer Price Index")
-st.caption("🚀 TCPI Startup | Status: Live & Automated")
+st.title("📈 Bytesig AI: Consumer Price Index Tracker")
+st.caption(" Economic AI Startup | Status: Live & Automated")
 st.markdown("### *AI-Powered Economic Forecasting for the Next Generation*")
 
 # 4. DATA ENGINE: Fetch Live Inflation Data
